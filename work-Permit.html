@@ -1,0 +1,671 @@
+
+
+
+<html>
+<head>
+<title>Requester Particulars</title>
+<!-- SR15277-BPR IPA-HPSNHJ-08 Feb 2011-Start -->
+<script language="JavaScript">
+
+function initRadioBtn(){
+	//alert("HI!");
+	var formNameHeader = "FVFORM.WPOLRequesterParticularsForm";
+	var radioBtnList = document.forms[0].elements['FVFORM.WPOLRequesterParticularsForm.idType'];
+	var passportNoVal = document.forms[0].elements[formNameHeader + '.passportNo'].value;
+	var nricVal = document.forms[0].elements[formNameHeader + '.nric'].value;
+
+	if((null == passportNoVal || passportNoVal == "") && (null == nricVal || nricVal == "")){
+		radioBtnList[0].checked = true;
+		radioBtnList[1].checked = false;
+		//alert(radioBtnList[0].checked);
+	}
+
+	if(null != nricVal && nricVal != ""){
+		radioBtnList[0].checked = true;
+		radioBtnList[1].checked = false;
+		changed = true;
+	}
+	
+	if(null != passportNoVal && passportNoVal != ""){
+		radioBtnList[0].checked = false;
+		radioBtnList[1].checked = true;
+	}
+
+	if(radioBtnList[0].checked){
+		document.forms[0].elements[formNameHeader + '.nric'].disabled  = false;
+		document.forms[0].elements[formNameHeader + '.passportNo'].disabled  = true;
+		document.forms[0].elements[formNameHeader + '.passportNo'].value  = "";
+	
+	} else if(radioBtnList[1].checked){
+		document.forms[0].elements[formNameHeader + '.passportNo'].disabled  = false;
+		document.forms[0].elements[formNameHeader + '.nric'].disabled  = true;
+		document.forms[0].elements[formNameHeader + '.nric'].value  = "";
+	}
+	
+	document.forms[0].elements['FVFORM.WPOLRequesterParticularsForm.idType'] = radioBtnList;
+}
+
+function toggleIdFields()
+{
+	//alert("HI!!");
+	var radioBtnList = document.forms[0].elements['FVFORM.WPOLRequesterParticularsForm.idType'];
+	var formNameHeader = "FVFORM.WPOLRequesterParticularsForm";
+	//alert(radioBtnList[0].checked);
+	//alert(radioBtnList[1].checked);
+	var passportNoVal = document.forms[0].elements[formNameHeader + '.passportNo'].value;
+	var nricVal = document.forms[0].elements[formNameHeader + '.nric'].value;
+
+	if(radioBtnList[0].checked){
+		document.forms[0].elements[formNameHeader + '.nric'].disabled  = false;
+		document.forms[0].elements[formNameHeader + '.passportNo'].disabled  = true;
+		document.forms[0].elements[formNameHeader + '.passportNo'].value  = "";
+	
+	} else if(radioBtnList[1].checked){
+		document.forms[0].elements[formNameHeader + '.passportNo'].disabled  = false;
+		document.forms[0].elements[formNameHeader + '.nric'].disabled  = true;
+		document.forms[0].elements[formNameHeader + '.nric'].value  = "";
+	}
+	//document.forms[0].elements['FVFORM.WPOLRequesterParticularsForm.idType'] = radioBtnList;
+
+}
+</script>
+<!-- SR15277-BPR IPA-HPSNHJ-08 Feb 2011-End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--SR13883 start-->
+
+
+
+
+
+
+		<SCRIPT LANGUAGE="JAVASCRIPT">
+			function callSession() {
+				if (window.top) {
+					if (window.top.opener) {
+						if(window.top.opener.callSession) {
+							window.top.opener.callSession();
+						}
+					}
+				}
+			}
+		</SCRIPT>
+
+			<SCRIPT LANGUAGE="JAVASCRIPT">
+				if(window.opener==null)
+				{
+				  if(parent.parent.portalFrame!=null)
+					{
+					parent.parent.portalFrame.callSession();
+					}
+				}
+				else
+				{
+				window.onload = callSession;
+				}
+			</SCRIPT>
+
+
+ 
+
+
+
+
+
+
+
+<!---- This page within will be display only the first time -->	   
+
+	
+		
+		<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+
+
+var helpPage = "/AAController?destination=WP_ONLINEHelpNotFound";
+function openHelp()
+{
+	if (top.appFrame.mainFrame.helpPage != "")
+		window.open(helpPage);
+}
+
+
+//-->
+</SCRIPT>
+	
+
+	<SCRIPT LANGUAGE="JavaScript">
+
+function dolink(dpId,rowIndex,action,targetForm,reloadtarget,targetPage)
+{
+    	
+    	var form=null;
+	var tempname=null;
+		
+	if (targetForm.length!=0)
+	{
+	  var mydoc=eval("parent." + targetForm).document;
+	}  
+	else
+	{
+          var mydoc=document;
+	}  
+    	
+    	
+    	for(var i=0;i<mydoc.forms.length;i++)
+    	{
+    		tempname=new String(mydoc.forms[i].name);
+    		if (tempname.indexOf("FIFORM")!=-1){
+    			form=mydoc.forms[i];
+    			break;
+    		}
+    	}
+
+    if (form==null)
+    {
+      for(var i=0;i<mydoc.forms.length;i++)
+      {
+	tempname=new String(mydoc.forms[i].name);
+	if (tempname.indexOf("DPFORM")!=-1)
+	{
+		form=document.forms[i];
+		break;
+        }
+      }
+    }
+ 	
+
+    form.dpId.value=dpId;
+    form.rowIndex.value=rowIndex;
+    form.action.value=action;
+    form.destination.value=targetPage;
+    
+    if (reloadtarget!="")
+    	form.target=reloadtarget;
+    else
+        form.target="_parent";
+    
+    form.submit();
+
+}
+</SCRIPT>
+
+ 
+	<SCRIPT LANGUAGE="JavaScript1.2" SRC="common/js/popupdecorator.js" TYPE='text/javascript'>
+	</SCRIPT>
+
+	   
+<!----------------------Please add any Additional here---------------------------->
+
+<link rel="stylesheet" type="text/css" href="iwps/common/css/Style.css">
+
+<!-- starts myDecorator -->
+<STYLE TYPE="text/css"><!--.DEK {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;}!--></STYLE>
+
+<!-- ends myDecorator -->
+
+
+
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+
+//-->
+
+document.title = "MOM-Portal";
+var iwpsPopupWindowSubdomain = "subdomain";
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="iwps/common/js/windows.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="iwps/common/js/formater.js"></SCRIPT>
+<!-- [Start] 20101206 HPSFCA SR14091. -->
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="iwps/common/js/CalendarPopup.js"></SCRIPT>
+<!-- [End] 20101206 HPSFCA SR14091. -->
+<SCRIPT LANGUAGE="JAVASCRIPT">window.focus();</SCRIPT>
+
+
+<meta http-equiv="Cache-Control" content="must-revalidate"/>
+<meta http-equiv="Cache-Control" content="private"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="0">
+
+
+
+
+
+
+
+		<SCRIPT LANGUAGE="JAVASCRIPT">
+			function callSession() {
+				if (window.top) {
+					if (window.top.opener) {
+						if(window.top.opener.callSession) {
+							window.top.opener.callSession();
+						}
+					}
+				}
+			}
+		</SCRIPT>
+
+			<SCRIPT LANGUAGE="JAVASCRIPT">
+				if(window.opener==null)
+				{
+				  if(parent.parent.portalFrame!=null)
+					{
+					parent.parent.portalFrame.callSession();
+					}
+				}
+				else
+				{
+				window.onload = callSession;
+				}
+			</SCRIPT>
+
+
+
+
+
+<STYLE TYPE="text/javascript">
+<!--
+if (!HM_IE)
+{
+	tags.input.fontFamily = "";
+	tags.input.fontSize = "";
+}
+//-->
+</STYLE>
+
+<STYLE TYPE="text/javascript">
+<!--
+a:link {  text-decoration: none; color: #FFFFFF}
+a:hover {  color: #FF6600; text-decoration: none}
+a:visited {  color: #FFFFFF; text-decoration: none}
+//-->
+</STYLE>
+
+<script language="JavaScript">
+<!--
+	// Browser Sniffer Start
+	v3=false; ie4=false; ie5=false; nn4=false; nn6=false; 
+	if(document.images){
+        ie4 = (document.all && !document.getElementById)?true:false;
+        nn4 = (document.layers)?true:false;
+        ie5 = (document.all && document.getElementById)?true:false;
+        nn6 = (document.addEventListener)?true:false;
+	} else {
+	    v3 = true;	
+	}
+	// Browser Sniffer End
+	
+	var defaultButtonId="";
+	function initDefaultButton(btnId)
+	{
+		defaultButtonId=btnId;
+		window.focus();
+	}
+
+
+	// CR00859 Hoai Start
+	var disableEnterButton = false;
+	function initDisableEnterButton()
+	{
+		disableEnterButton = true;
+		//window.focus();//removed by Hoai for CR00889: this focus prevents the popup window for printing being focused
+	}	
+	//Hoai End
+	
+	function keyHandler(e)
+	{
+	    var pressedKey;
+	    if(ie4||ie5) {
+	    	e=window.event;
+	    	pressedKey = e.keyCode;
+	    }
+	    if(nn4) pressedKey = e.which;
+	    if(nn6) pressedKey = e.keyCode;
+	    //alert('pressedKey : '+pressedKey);
+
+		// CR00859 Hoai Start
+		if (pressedKey==13 && disableEnterButton)
+		{
+			if(ie4||ie5) e.keyCode = 0;
+			return false; 
+		}
+		// Hoai end
+
+		if( pressedKey==13 && defaultButtonId!="" ) 
+		{
+   			if(ie4||ie5)document.forms[0].elements[defaultButtonId].click();
+   			//if(nn4) // Do Nothing;
+   			if(nn6)document.forms[0].elements[defaultButtonId].click();
+   			return false;
+		}	    
+	}
+	document.onkeypress = keyHandler;
+//-->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body onLoad = "initRadioBtn();">
+<!------------ Panel Header Start ------------>
+
+<!------------ Panel Header End ------------>
+
+
+	
+
+
+
+
+
+
+		<SCRIPT LANGUAGE="JAVASCRIPT">
+			function callSession() {
+				if (window.top) {
+					if (window.top.opener) {
+						if(window.top.opener.callSession) {
+							window.top.opener.callSession();
+						}
+					}
+				}
+			}
+		</SCRIPT>
+
+			<SCRIPT LANGUAGE="JAVASCRIPT">
+				if(window.opener==null)
+				{
+				  if(parent.parent.portalFrame!=null)
+					{
+					parent.parent.portalFrame.callSession();
+					}
+				}
+				else
+				{
+				window.onload = callSession;
+				}
+			</SCRIPT>
+
+
+
+
+
+
+
+<!-- Start - Wina 12/07/2006 Customer Satisfaction Poll -->
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+	/// Popup Information on the Customer Satisfaction Poll
+	function MM_openBrWindow(theURL,winName,features) { //v2.0
+	  window.open(theURL,winName,features);
+	}
+</SCRIPT>
+<!-- End - Wina 12/07/2006 Customer Satisfaction Poll -->
+
+<table class="dataBoxNoControl" width="750" border="0">
+  <tr>
+    <td class="attention" nowrap="nowrap"><font color="blue">Work Permit (WP) Validity / Application Status / Salary (Approved and Valid WP)-PIWPSOLEQ651-20/03/2021</font></td>
+	
+	<!-- Start - Wina 12/07/2006 ePoll -->
+	<!--td valign="right" class="attention" width="70"><font color="blue"><a href="#" onClick="MM_openBrWindow('https://www.jusfeedback.asia/Community/se.ashx?s=7FDA9EA749F14922&Agency=MOM.HQ&Svc=WPOL&eLnk=https://wponline.mom.gov.sg&Cat=Business','CSS','status=yes,width=600,height=600')">Rate our<br>e-Service</a></font></td>
+	<!-- End - Wina 12/07/2006 ePoll -->
+  </tr>
+</table>
+
+
+<script id='_webengage_script_tag' type='text/javascript'>	
+	var webengage; !function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="feedback survey notification".split(z),c="options render clear abort".split(z),p="Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i<l.length;i++)o(r,[l[i]]);for(i=0;i<a.length;i++){for(r[a[i]]={},s=0;s<c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s<p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i<u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://ssl.widgets.webengage.com":"http://cdn.widgets.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");
+	webengage.init("~2024c45d"); 
+	// SR - 2019 - 19305
+	webengage.screen('Details', { 'Id': '', 'UEN': '', 'EANO':''});
+
+	// SR - 2020 - 09676
+	function getWebEngageFeedback(){
+		webengage.feedback.render({'showForm':true});
+	}
+</script>
+
+
+ 
+ 
+<script src="https://assets.wogaa.sg/scripts/wogaa.js"></script>
+
+
+
+
+ 
+ 
+
+
+<script>window.wogaaCustom.startTransactionalService('wponlinemom-617');</script>
+ 
+ 
+
+<br>
+<DIV ID="dek" CLASS="dek"></DIV>
+
+
+
+
+
+
+
+<FORM name="FIFORMSET13727" action="WPOLEQController" Method="POST"  ><input type="hidden" name="action" value=""><input type="hidden" name="destination" value=""><input type="hidden" name="submitform" value=""><input type="hidden" name="dpId" value=""><input type="hidden" name="rowIndex" value=""><input type="hidden" name="submitted" value="false"><input type="hidden" name="FVTRANSIENT"  value="true"><input type="hidden" name="FVUSEPARSEDFORM"  value="false"><input type="hidden" name="FVIGNOREVALERRORS"  value="false">
+
+
+	<table class="dataBox" style="display: none;">
+<tbody><tr><td class="formheaderRed">ERRORS</td></tr>
+</tbody></table>
+
+
+
+	<div class="outerBoxRed" style="display: none;">
+<table width="610">
+
+<tbody><tr class="WPOLEQE006" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE006:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid Name.</td>
+</tr>
+
+<tr class="WPOLEQE038" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE038:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid Passport No.</td>
+</tr>
+
+<tr class="WPOLEQE039" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE039:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid NRIC No/FIN/ Malaysian New IC No/WP No</td>
+</tr>
+
+
+
+
+
+</tbody></table>
+</div>
+
+
+
+
+   <input type="hidden" name="FVFORM.WPOLRequesterParticularsForm.HASCHANGED"  value="true">
+   <input type="hidden" name="FVFORM.WPOLRequesterParticularsForm.FVFORMID"        value="WPOLRequesterParticularsForm">
+   <input type="hidden" name="FVFORM.WPOLRequesterParticularsForm.FVALWAYSVALIDATE"  value="false">
+   <input type="hidden" name="FVFORM.WPOLRequesterParticularsForm.thispage" value="piwpsoleq651e_RequesterParticulars">
+   <input type="hidden" name="FVFORM.WPOLRequesterParticularsForm.renderedRowIndex" value="null">
+   <input type="hidden" name="FVFORM.WPOLRequesterParticularsForm.renderedDpId" value="null">
+ 
+ <input  type="hidden" name="FVFORM.WPOLRequesterParticularsForm.menu" value="1"   >
+
+<div class="outerBox">
+<!-- SR15277-BPR IPA-HPSNHJ-08 Feb 2011-Start -->
+
+  <table width="600" border="0">
+    <tr> 
+      <td colspan="3">Please fill up your particulars.</td>
+    </tr>
+    <tr> 
+      <td width="120">&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr> 
+   	  <td width = "2%" colspan="3"> Please select one of the following :-</td>
+    </tr>
+    <tr> 
+      <td width = "2%"> <input  type="radio" class="nric_radio_01" name="FVFORM.WPOLRequesterParticularsForm.idType" value="1"  onClick='javascript:toggleIdFields();'>
+</td>
+      <td class="mandatory" width="160" valign="middle">
+	      NRIC No/FIN/<br> Malaysian New IC No/<br> WP No
+      </td>      
+      <td valign="middle">:&nbsp; <input  type="text" class="nric_02" name="FVFORM.WPOLRequesterParticularsForm.nric" value="" size='12' onBlur='javascript:this.value=this.value.toUpperCase();' disabled='true'  MAXLENGTH="12"  > 
+* <br> &nbsp; &nbsp; (eg S1234567A or F1234567A or 123456123456<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or 0 12345678)
+      </td>
+    </tr>
+    <tr> 
+    	<td width = "2%"> <input  type="radio" class="passport_radio_01" name="FVFORM.WPOLRequesterParticularsForm.idType" value="2"  onClick='javascript:toggleIdFields();'>
+</td>
+      	<td class="mandatory" width="160" valign="middle">
+	      Passport No
+     	</td>      
+      <td valign="middle">:&nbsp; <input  type="text" class="passportNo_02" name="FVFORM.WPOLRequesterParticularsForm.passportNo" value="" size='16' onBlur='javascript:this.value=this.value.toUpperCase();' disabled='true'  MAXLENGTH="16"  > 
+* &nbsp; &nbsp;
+      </td>
+    </tr>
+        <tr> 
+      <td width="120">&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr> 
+    <!--  <td width = "2%" class="mandatory"></td>-->		
+      <td class="mandatory">Name</td>
+      <td colspan="2">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;:&nbsp; <input class="name_02"  type="text" name="FVFORM.WPOLRequesterParticularsForm.name" value="" size='45' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="45"  > 
+*
+      </td>
+    </tr>
+
+
+</form>
+
+	<tr> 
+      <td>&nbsp;</td><td>&nbsp;</td>
+      <td align="right"><input id="form_sub_01" type="button" name="#WPOLRequesterParticularsNextAction#WPOLRequesterParticularsForm" onDblClick="alert ('Double click is not allowed.'); return false;" value="Next &gt;" >
+
+      </td>
+    </tr>
+   
+  </table>
+
+<!-- SR15277-BPR IPA-HPSNHJ-08 Feb 2011-End -->
+</div>
+
+
+<script>
+	document.querySelector('#form_sub_01').onclick = ()=> {
+		document.querySelector('.dataBox').style.display = 'none';
+		document.querySelector('.outerBox').style.display = 'none';
+		document.querySelector('.WPOLEQE038').style.display = 'none';
+		document.querySelector('.outerBoxRed').style.display = 'none';
+		document.querySelector('.WPOLEQE006').style.display = 'none';
+		document.querySelector('.WPOLEQE039').style.display = 'none';
+		document.querySelector('.WPOLEQE038').style.display = 'none';
+
+		localStorage.setItem('name', '');
+		localStorage.setItem('nric', '');
+
+		let data = {
+			name : document.querySelector('.name_02').value,
+		};
+
+		localStorage.setItem('name', document.querySelector('.name_02').value);
+
+		if(document.querySelector('.nric_radio_01').checked) {
+			data['nric'] = document.querySelector('.nric_02').value;
+			localStorage.setItem('nric', document.querySelector('.nric_02').value);
+		} 
+
+		if (document.querySelector('.passport_radio_01').checked) {
+			data['passport'] = document.querySelector('.passportNo_02').value;
+			localStorage.setItem('nric', document.querySelector('.passportNo_02').value);
+		}
+
+		let flag = true;
+
+		if (data['name'] == '') {
+			document.querySelector('.dataBox').style.display = 'block';
+			document.querySelector('.outerBox').style.display = 'block';
+			document.querySelector('.outerBoxRed').style.display = 'block';
+			document.querySelector('.WPOLEQE006').style.display = 'block';
+			flag = false;
+		}
+
+		if (document.querySelector('.nric_radio_01').checked &&
+			data['nric'] == '') {
+			document.querySelector('.dataBox').style.display = 'block';
+			document.querySelector('.outerBox').style.display = 'block';
+			document.querySelector('.outerBoxRed').style.display = 'block';
+			document.querySelector('.WPOLEQE039').style.display = 'block';
+			flag = false;
+		}
+
+		if (document.querySelector('.passport_radio_01').checked &&
+			data['passport'] == '') {
+			document.querySelector('.dataBox').style.display = 'block';
+			document.querySelector('.outerBox').style.display = 'block';
+			document.querySelector('.outerBoxRed').style.display = 'block';
+			document.querySelector('.WPOLEQE038').style.display = 'block';
+			flag = false;
+		}
+
+		if (flag) {
+			window.location = 'WPOLworkPermitData.html';
+		}
+
+	}
+</script>
+
+
+
+<!--</form>-->
+</body>
+</html>

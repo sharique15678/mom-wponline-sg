@@ -1,0 +1,191 @@
+body {  font-family: Verdana, Arial, Helvetica, sans-serif ; background-color: #FFFFCC; font-size: 10pt}
+body.letter {  font-family: Verdana, Arial, Helvetica, sans-serif ; background-color: #FFFFFF; font-size: 10pt}
+a {font-family: Verdana, Arial, Helvetica, sans-serif ;font-size=10pt;font-weight: bold}
+a.tab:link {  color: #FFFFFF; text-decoration: none ;font-size=10pt;font-weight: bold}
+a.tab:visited {  color: #FFFFFF; text-decoration: none ;font-size=10pt;font-weight: bold}
+a.tab:hover {  color: #FF6600; text-decoration: none ;font-size=10pt;font-weight: bold}
+a.tab:active {  color: #FFFFFF; text-decoration: none ;font-size=10pt;font-weight: bold}
+input {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif}
+select {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+td {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+textarea {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+.pageHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.formHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.attention {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FF0000}
+.outerBox {  width: 610px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #0099CC solid}
+.outerBoxBlack {  width: 610px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #000000 solid}
+.dataBox {  width: 600px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 0px}
+.sectionHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.tableGroup {font-size:10pt;background-color:#0099CC;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FFFFFF}
+.tableRowOdd {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: normal; background-color: #CCCCCC}
+.tableRowEven { font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: normal}
+.mandatory {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FF0000}
+.advisoryNote{font-size:8pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: normal; color:#000000}
+
+.tableRowOddBold {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: bold; background-color: #CCCCCC}
+.tableRowEvenBold { font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: bold}
+
+
+.dataBoxNoControl { padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 0px }
+.outerBoxNoControl { padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #0099CC solid }
+.menuLinks {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; font-weight: bold}
+.linktext {  color: #000000; text-decoration: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+.warning {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FF0000}
+.formHeaderRed {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FF0000}
+.outerBoxRed {  width: 610px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #FF0000 solid}
+.dplink {  text-decoration: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+
+.tabLink { font-family: Verdana, Arial, Helvetica, sans-serif ;font-size=10pt;font-weight: bold; text-decoration:  none }
+
+
+.quotaOntab { background-image: url(/iwps/common/images/OnTab.gif); background-repeat: no-repeat; background-position: top; font-family : Verdana, Arial, Helvetica, Sans Serif; font-size :10; text-decoration:none;}
+.quotaOfftab { background-image: url(/iwps/common/images/OffTab.gif); background-repeat: no-repeat; background-position: top; font-family : Verdana, Arial, Helvetica, Sans Serif; font-size : 10; text-decoration:none;}
+
+ td.ontab
+ {
+	background-image: url(/iwps/common/images/OnTab.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	font-family : Verdana, Arial, Helvetica, Sans Serif;
+	font-size :12;
+	text-decoration:none;
+}
+
+ td.offtab
+ {
+	background-image: url(/iwps/common/images/OffTab.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	font-family : Verdana, Arial, Helvetica, Sans Serif;
+	font-size : 12;
+	text-decoration:none;
+}
+
+
+table.tabHeader  {
+	font-family : Verdana, Arial, Helvetica, Sans Serif;
+	font-size :9;
+	color : White;
+	text-decoration:none;
+	font-weight : bold;
+}
+
+/* [Start] 20101206 HPSFCA SR14091. */
+/* [Start] The original style of the calendar. */
+/* <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV> */
+/* [End] The original style of the calendar. */
+.CALcpYearNavigation,
+.CALcpMonthNavigation
+{
+    background-color:#6677DD;
+    text-align:center;
+    vertical-align:center;
+    text-decoration:none;
+    color:#FFFFFF;
+    font-weight:bold;
+}
+.CALcpDayColumnHeader,
+.CALcpYearNavigation,
+.CALcpMonthNavigation,
+.CALcpCurrentMonthDate,
+.CALcpCurrentMonthDateDisabled,
+.CALcpOtherMonthDate,
+.CALcpOtherMonthDateDisabled,
+.CALcpCurrentDate,
+.CALcpCurrentDateDisabled,
+.CALcpTodayText,
+.CALcpTodayTextDisabled,
+.CALcpText
+{
+    font-family:arial;
+    font-size:10pt; /* 8pt; */
+}
+TD.CALcpDayColumnHeader
+{
+    text-align:right;
+    border:solid thin #6677DD;
+    border-width:0 0 1 0;
+}
+.CALcpCurrentMonthDate,
+.CALcpOtherMonthDate,
+.CALcpCurrentDate
+{
+    text-align:right;
+    text-decoration:none;
+}
+.CALcpCurrentMonthDateDisabled,
+.CALcpOtherMonthDateDisabled,
+.CALcpCurrentDateDisabled
+{
+    color:#999999; /* #D0D0D0; */
+    text-align:right;
+    text-decoration:line-through;
+}
+.CALcpCurrentMonthDate
+{
+    color:#6677DD;
+    font-weight:bold;
+}
+.CALcpCurrentDate
+{
+    color: #FFFFFF;
+    font-weight:bold;
+}
+.CALcpOtherMonthDate
+{
+    color:#808080;
+}
+TD.CALcpCurrentDate
+{
+    color:#FFFFFF;
+    background-color: #6677DD;
+    border-width:1;
+    border:solid thin #000000;
+}
+TD.CALcpCurrentDateDisabled
+{
+    border-width:1;
+    border:solid thin #FFAAAA;
+}
+TD.CALcpTodayText,
+TD.CALcpTodayTextDisabled
+{
+    border:solid thin #6677DD;
+    border-width:1 0 0 0;
+}
+A.CALcpTodayText,
+SPAN.CALcpTodayTextDisabled
+{
+    height:20px;
+}
+A.CALcpTodayText
+{
+    color:#6677DD;
+    font-weight:bold;
+}
+SPAN.CALcpTodayTextDisabled
+{
+    color:#D0D0D0;
+}
+.CALcpBorder
+{
+    border:solid thin #6677DD;
+}
+/* [End] 20101206 HPSFCA SR14091. */
+
+/* [Start] 20110221 HPSFCA SR17264. */
+div.htmltooltip
+{
+    position: absolute; /*leave this and next 3 values alone*/
+    z-index: 1000;
+    left: -1000px;
+    top: -1000px;
+    background: #E0E0F8; /* #272727; */
+    border: solid thin #6677DD; /* 3px solid black; */
+    color: black; /* white; */
+    padding: 1px;
+    width: 310px; /*width of tooltip*/
+    font-family: arial;
+    font-size: 10pt;
+}
+/* [End] 20110221 HPSFCA SR17264. */

@@ -1,0 +1,14 @@
+a {font-family: Verdana, Arial, Helvetica, sans-serif ;font-size=10pt;font-weight: normal}
+a.tab:link {  color: #0000FF; text-decoration: none ;font-size=10pt;font-weight: normal}
+a.tab:visited {  color: #808000; text-decoration: none ;font-size=10pt;font-weight: normal}
+a.tab:hover {  color: #0000FF; text-decoration: none ;font-size=10pt;font-weight: normal}
+a.tab:active { text-decoration: none ;font-size=10pt;font-weight: normal}
+input {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif}
+select {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: normal}
+td {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: normal}
+textarea {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: normal}
+.pageHeader {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #0000FF}
+.formHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.sectionHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.attention {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FF0000}
+.pagePanel {font-size:8pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FFFFFF}

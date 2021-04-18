@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>WP Online - Portal</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<!--[if lte IE 9]>
+		<script src="/common/js/IE_JQuery.js"></script>
+		<link rel="stylesheet" type="text/css" href="/common/css/IE_custom.css">
+	<![endif]-->
+	<!--[if !IE]><!-->
+	<link rel="stylesheet" type="text/css" href="common/css/custom.css">
+	<!--<![endif]-->
+	
+	<script language="JavaScript1.2">
+		var windowObjects = new Array();
+
+		function closeWindows() {
+			for (var i = 0; i < windowObjects.length; i++) {
+				if (null != windowObjects[i]) {
+					windowObjects[i].close();
+				}
+			}
+		}
+	</script>
+</head>
+
+
+<body>
+	
+	<div class="frame-container">
+		<iframe name="portalFrame" class="portalFrame" frameborder="no"
+			src="ESVCLoginControl.html"></iframe>
+
+		<iframe name="menuFrame" class="menuFrame" id="menuFrame" frameborder="no"
+			src="ESVCLoginController-sidebar.html"></iframe>
+
+		<div class="frame-content">
+			
+			<iframe name="appFrame" class="appFrame" id="appFrame" frameborder="no"
+				src="ESVCLoginController-non-login-homepage.html" onload="resizeIframe(this)"></iframe>
+			
+			
+<div class="footer-container">
+    <div class="footer-text footer-left">
+        <div>
+            <p><a href="https://www.mom.gov.sg/privacy-statement" target="_blank">Privacy Statement</a></p>
+        </div>
+        <div>
+            <p><a href="https://www.mom.gov.sg/terms-of-use" target="_blank">Terms of Use</a></p>
+        </div>
+        <div>
+            <p class="rateService" onclick="rateThisService();">Rate this Service</p>
+        </div>    
+    </div>
+    <div class="footer-text footer-right">
+        <p>&copy; <span id="currentYear"></span> Government of Singapore</p>
+    </div>
+</div>
+
+		</div>
+	</div>
+	<!--[if lte IE 9]>
+		<script src="/common/js/IE_iFrame.js"></script>
+	<![endif]-->
+	<!--[if !IE]><!-->
+	<script src="common/js/iFrameConfig.js"></script>
+	<!--<![endif]-->
+</body>
+
+
+</html>
+
+
+

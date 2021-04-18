@@ -1,0 +1,29 @@
+body {  font-family: Verdana, Arial, Helvetica, sans-serif ; background-color: #FFFFCC; font-size: 10pt}
+a {font-family: Verdana, Arial, Helvetica, sans-serif ;font-size=10pt;font-weight: bold}
+a.tab:link {  color: #FFFFFF; text-decoration: none ;font-size=10pt;font-weight: bold}
+a.tab:visited {  color: #FFFFFF; text-decoration: none ;font-size=10pt;font-weight: bold}
+a.tab:hover {  color: #FF6600; text-decoration: none ;font-size=10pt;font-weight: bold}
+a.tab:active {  color: #FFFFFF; text-decoration: none ;font-size=10pt;font-weight: bold}
+input {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif}
+select {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+td {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+textarea {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+.pageHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.formHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.attention {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FF0000}
+.outerBox {  width: 610px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #0099CC solid}
+.dataBox {  width: 600px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 0px}
+.sectionHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.tableGroup {font-size:10pt;background-color:#0099CC;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FFFFFF}
+.tableRowOdd {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: normal; background-color: #CCCCCC}
+.tableRowEven { font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: normal}
+.mandatory {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FF0000}
+
+
+.dataBoxNoControl { padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 0px }
+.outerBoxNoControl { padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #0099CC solid }
+.menuLinks {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; font-weight: bold}
+.linktext {  color: #000000; text-decoration: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+.warning {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: normal; color: #FF0000}
+.formHeaderRed {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FF0000}
+.outerBoxRed {  width: 610px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #FF0000 solid}

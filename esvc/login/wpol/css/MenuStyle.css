@@ -1,0 +1,73 @@
+BODY {background-color: white}
+TD {font-size: 9pt; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+	text-decoration: none;}
+A  {text-decoration: none;
+       color: black}
+A:hover {TEXT-DECORATION: underline;
+	     color: '#820082';}
+}
+
+input {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif}
+select {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+textarea {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold}
+.pageHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.formHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.attention {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FF0000}
+.outerBox {  width: 610px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #0099CC solid}
+.dataBox {  width: 600px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 0px}
+.sectionHeader {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #000000}
+.tableGroup {font-size:10pt;background-color:#0099CC;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FFFFFF}
+.tableRowOdd {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: normal; background-color: #CCCCCC}
+.tableRowEven { font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: normal}
+.mandatory {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color:#FF0000}
+
+.tableRowOddBold {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: bold; background-color: #CCCCCC}
+.tableRowEvenBold { font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: bold}
+
+
+.dataBoxNoControl { padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 0px }
+.outerBoxNoControl { padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #0099CC solid }
+.menuLinks {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; font-weight: bold}
+.linktext {  color: #000000; text-decoration: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+.warning {font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FF0000}
+.formHeaderRed {font-size:12pt;font-family: Verdana, Arial, Helvetica, sans-serif;font-weight: bold; color: #FF0000}
+.outerBoxRed {  width: 610px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: 2px #FF0000 solid}
+.dplink {  text-decoration: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+
+.tabLink { font-family: Verdana, Arial, Helvetica, sans-serif ;font-size=10pt;font-weight: bold; text-decoration:  none }
+
+.quotaOntab { background-image: url(/iwps/common/images/OnTab.gif); background-repeat: no-repeat; background-position: top; font-family : Verdana, Arial, Helvetica, Sans Serif; font-size :10; text-decoration:none;}
+.quotaOfftab { background-image: url(/iwps/common/images/OffTab.gif); background-repeat: no-repeat; background-position: top; font-family : Verdana, Arial, Helvetica, Sans Serif; font-size : 10; text-decoration:none;}
+
+.mainmenu { text-decoration: none ;font-size:9pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: bold}
+.submenu { font-size:10pt;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000; font-weight: normal}
+
+ td.ontab
+ {
+	background-image: url(/iwps/common/images/OnTab.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	font-family : Verdana, Arial, Helvetica, Sans Serif;
+	font-size :12;
+	text-decoration:none;
+}
+
+ td.offtab
+ {
+	background-image: url(/iwps/common/images/OffTab.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	font-family : Verdana, Arial, Helvetica, Sans Serif;
+	font-size : 12;
+	text-decoration:none;
+}
+
+
+table.tabHeader  {
+	font-family : Verdana, Arial, Helvetica, Sans Serif;
+	font-size :9;
+	color : White;
+	text-decoration:none;
+	font-weight : bold;
+}
