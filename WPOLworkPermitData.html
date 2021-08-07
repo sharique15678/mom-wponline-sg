@@ -1,0 +1,777 @@
+
+
+
+
+
+<html>
+<head>
+<title>Worker Particulars</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--SR13883 start-->
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+
+		<SCRIPT LANGUAGE="JAVASCRIPT">
+			function callSession() {
+				if (window.top) {
+					if (window.top.opener) {
+						if(window.top.opener.callSession) {
+							window.top.opener.callSession();
+						}
+					}
+				}
+			}
+		</SCRIPT>
+
+			<SCRIPT LANGUAGE="JAVASCRIPT">
+				if(window.opener==null)
+				{
+				  if(parent.parent.portalFrame!=null)
+					{
+					parent.parent.portalFrame.callSession();
+					}
+				}
+				else
+				{
+				window.onload = callSession;
+				}
+			</SCRIPT>
+
+
+ 
+
+
+
+
+
+
+
+<!---- This page within will be display only the first time -->	   
+
+	
+		
+		<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+
+
+var helpPage = "/AAController?destination=WP_ONLINEHelpNotFound";
+function openHelp()
+{
+	if (top.appFrame.mainFrame.helpPage != "")
+		window.open(helpPage);
+}
+
+
+//-->
+</SCRIPT>
+	
+
+	<SCRIPT LANGUAGE="JavaScript">
+
+function dolink(dpId,rowIndex,action,targetForm,reloadtarget,targetPage)
+{
+    	
+    	var form=null;
+	var tempname=null;
+		
+	if (targetForm.length!=0)
+	{
+	  var mydoc=eval("parent." + targetForm).document;
+	}  
+	else
+	{
+          var mydoc=document;
+	}  
+    	
+    	
+    	for(var i=0;i<mydoc.forms.length;i++)
+    	{
+    		tempname=new String(mydoc.forms[i].name);
+    		if (tempname.indexOf("FIFORM")!=-1){
+    			form=mydoc.forms[i];
+    			break;
+    		}
+    	}
+
+    if (form==null)
+    {
+      for(var i=0;i<mydoc.forms.length;i++)
+      {
+	tempname=new String(mydoc.forms[i].name);
+	if (tempname.indexOf("DPFORM")!=-1)
+	{
+		form=document.forms[i];
+		break;
+        }
+      }
+    }
+ 	
+
+    form.dpId.value=dpId;
+    form.rowIndex.value=rowIndex;
+    form.action.value=action;
+    form.destination.value=targetPage;
+    
+    if (reloadtarget!="")
+    	form.target=reloadtarget;
+    else
+        form.target="_parent";
+    
+    form.submit();
+
+}
+</SCRIPT>
+
+ 
+	<SCRIPT LANGUAGE="JavaScript1.2" SRC="common/js/popupdecorator.js" TYPE='text/javascript'>
+	</SCRIPT>
+
+	   
+<!----------------------Please add any Additional here---------------------------->
+
+<link rel="stylesheet" type="text/css" href="iwps/common/css/Style.css">
+
+<!-- starts myDecorator -->
+<STYLE TYPE="text/css"><!--.DEK {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;}!--></STYLE>
+
+<!-- ends myDecorator -->
+
+
+
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+
+//-->
+
+document.title = "MOM-Portal";
+var iwpsPopupWindowSubdomain = "subdomain";
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="iwps/common/js/windows.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="iwps/common/js/formater.js"></SCRIPT>
+<!-- [Start] 20101206 HPSFCA SR14091. -->
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="iwps/common/js/CalendarPopup.js"></SCRIPT>
+<!-- [End] 20101206 HPSFCA SR14091. -->
+<SCRIPT LANGUAGE="JAVASCRIPT">window.focus();</SCRIPT>
+
+
+<meta http-equiv="Cache-Control" content="must-revalidate"/>
+<meta http-equiv="Cache-Control" content="private"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="0">
+
+
+
+
+
+
+
+		<SCRIPT LANGUAGE="JAVASCRIPT">
+			function callSession() {
+				if (window.top) {
+					if (window.top.opener) {
+						if(window.top.opener.callSession) {
+							window.top.opener.callSession();
+						}
+					}
+				}
+			}
+		</SCRIPT>
+
+			<SCRIPT LANGUAGE="JAVASCRIPT">
+				if(window.opener==null)
+				{
+				  if(parent.parent.portalFrame!=null)
+					{
+					parent.parent.portalFrame.callSession();
+					}
+				}
+				else
+				{
+				window.onload = callSession;
+				}
+			</SCRIPT>
+
+
+
+
+
+<STYLE TYPE="text/javascript">
+<!--
+if (!HM_IE)
+{
+	tags.input.fontFamily = "";
+	tags.input.fontSize = "";
+}
+//-->
+</STYLE>
+
+<STYLE TYPE="text/javascript">
+<!--
+a:link {  text-decoration: none; color: #FFFFFF}
+a:hover {  color: #FF6600; text-decoration: none}
+a:visited {  color: #FFFFFF; text-decoration: none}
+//-->
+</STYLE>
+
+<script language="JavaScript">
+<!--
+	// Browser Sniffer Start
+	v3=false; ie4=false; ie5=false; nn4=false; nn6=false; 
+	if(document.images){
+        ie4 = (document.all && !document.getElementById)?true:false;
+        nn4 = (document.layers)?true:false;
+        ie5 = (document.all && document.getElementById)?true:false;
+        nn6 = (document.addEventListener)?true:false;
+	} else {
+	    v3 = true;	
+	}
+	// Browser Sniffer End
+	
+	var defaultButtonId="";
+	function initDefaultButton(btnId)
+	{
+		defaultButtonId=btnId;
+		window.focus();
+	}
+
+
+	// CR00859 Hoai Start
+	var disableEnterButton = false;
+	function initDisableEnterButton()
+	{
+		disableEnterButton = true;
+		//window.focus();//removed by Hoai for CR00889: this focus prevents the popup window for printing being focused
+	}	
+	//Hoai End
+	
+	function keyHandler(e)
+	{
+	    var pressedKey;
+	    if(ie4||ie5) {
+	    	e=window.event;
+	    	pressedKey = e.keyCode;
+	    }
+	    if(nn4) pressedKey = e.which;
+	    if(nn6) pressedKey = e.keyCode;
+	    //alert('pressedKey : '+pressedKey);
+
+		// CR00859 Hoai Start
+		if (pressedKey==13 && disableEnterButton)
+		{
+			if(ie4||ie5) e.keyCode = 0;
+			return false; 
+		}
+		// Hoai end
+
+		if( pressedKey==13 && defaultButtonId!="" ) 
+		{
+   			if(ie4||ie5)document.forms[0].elements[defaultButtonId].click();
+   			//if(nn4) // Do Nothing;
+   			if(nn6)document.forms[0].elements[defaultButtonId].click();
+   			return false;
+		}	    
+	}
+	document.onkeypress = keyHandler;
+//-->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<!------------ Panel Header Start ------------>
+
+
+
+	
+
+
+
+
+
+
+		<SCRIPT LANGUAGE="JAVASCRIPT">
+			function callSession() {
+				if (window.top) {
+					if (window.top.opener) {
+						if(window.top.opener.callSession) {
+							window.top.opener.callSession();
+						}
+					}
+				}
+			}
+		</SCRIPT>
+
+			<SCRIPT LANGUAGE="JAVASCRIPT">
+				if(window.opener==null)
+				{
+				  if(parent.parent.portalFrame!=null)
+					{
+					parent.parent.portalFrame.callSession();
+					}
+				}
+				else
+				{
+				window.onload = callSession;
+				}
+			</SCRIPT>
+
+
+
+
+
+
+
+<!-- Start - Wina 12/07/2006 Customer Satisfaction Poll -->
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+	/// Popup Information on the Customer Satisfaction Poll
+	function MM_openBrWindow(theURL,winName,features) { //v2.0
+	  window.open(theURL,winName,features);
+	}
+</SCRIPT>
+<!-- End - Wina 12/07/2006 Customer Satisfaction Poll -->
+
+<table class="dataBoxNoControl" width="750" border="0">
+  <tr>
+    <td class="attention" nowrap="nowrap"><font color="blue">Work Permit (WP) Validity / Application Status / Salary (Approved and Valid WP)-PIWPSOLEQ652-<span class="date_now_01"></span></font></td>
+	
+	<!-- Start - Wina 12/07/2006 ePoll -->
+	<!--td valign="right" class="attention" width="70"><font color="blue"><a href="#" onClick="MM_openBrWindow('https://www.jusfeedback.asia/Community/se.ashx?s=7FDA9EA749F14922&Agency=MOM.HQ&Svc=WPOL&eLnk=https://wponline.mom.gov.sg&Cat=Business','CSS','status=yes,width=600,height=600')">Rate our<br>e-Service</a></font></td>
+	<!-- End - Wina 12/07/2006 ePoll -->
+  </tr>
+</table>
+
+
+<script id='_webengage_script_tag' type='text/javascript'>	
+	var webengage; !function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="feedback survey notification".split(z),c="options render clear abort".split(z),p="Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i<l.length;i++)o(r,[l[i]]);for(i=0;i<a.length;i++){for(r[a[i]]={},s=0;s<c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s<p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i<u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://ssl.widgets.webengage.com":"http://cdn.widgets.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");
+	webengage.init("~2024c45d"); 
+	// SR - 2019 - 19305
+	webengage.screen('Details', { 'Id': '', 'UEN': '', 'EANO':''});
+
+	// SR - 2020 - 09676
+	function getWebEngageFeedback(){
+		webengage.feedback.render({'showForm':true});
+	}
+</script>
+
+<!------------ Panel Header End ------------>
+<DIV ID="dek" CLASS="dek"></DIV>
+
+<FORM name="FIFORMSET21099" action="WPOLEQController" Method="POST"  ><input type="hidden" name="action" value=""><input type="hidden" name="destination" value=""><input type="hidden" name="submitform" value=""><input type="hidden" name="dpId" value=""><input type="hidden" name="rowIndex" value=""><input type="hidden" name="submitted" value="false"><input type="hidden" name="FVTRANSIENT"  value="true"><input type="hidden" name="FVUSEPARSEDFORM"  value="false"><input type="hidden" name="FVIGNOREVALERRORS"  value="false">
+
+
+
+
+	<table class="dataBox" style="display: none;">
+<tbody><tr><td class="formheaderRed">ERRORS</td></tr>
+</tbody></table>
+
+
+	<div class="outerBoxRed" style="display: none;">
+<table width="610">
+
+<tbody><tr class="WPOLEQE014" style="display: none;"> 
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE014:</td>
+	<td class="attention" width="82%" wrap="">Please enter both fields in the Options.</td>
+</tr>
+
+<tr class="WPOLEQE012" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE012:</td>
+	<td class="attention" width="82%" wrap="">Please enter at least one of the Options.</td>
+</tr>
+
+<tr class="WPOLEQE013" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE013:</td>
+	<td class="attention" width="82%" wrap="">Please enter only one of the Options.</td>
+</tr>
+
+
+<tr class="WPOLEQE013q" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE011:</td>
+	<td class="attention" width="82%" wrap="">No data with the given name exists</td>
+</tr>
+
+<tr class="UEN001" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">UEN001:</td>
+	<td class="attention" width="82%" wrap="">Invalid/Incomplete CPF Submission Number</td>
+</tr>
+
+<tr class="UEN004" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">UEN004:</td>
+	<td class="attention" width="82%" wrap="">Invalid Employer's NRIC</td>
+</tr>
+
+<tr class="UEN005" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">UEN005:</td>
+	<td class="attention" width="82%" wrap="">Invalid Employer's FIN</td>
+</tr>
+
+<tr class="UEN101" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">UEN101:</td>
+	<td class="attention" width="82%" wrap="">You have entered more than one field. Please only enter either the CPF Submission No. or Employer's NRIC or Employer's FIN</td>
+</tr>
+
+
+<tr class="WPOLEQE007" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE007:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid Worker's Work Permit No.</td>
+</tr>
+
+<tr class="WPOLEQE031" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE031:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid passport number.</td>
+</tr>
+
+<tr class="WPOLEQE009" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE009:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid Date of Application of Work Permit.</td>
+</tr>
+
+<tr class="WPOLEQE015" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE015:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid NRIC No.</td>
+</tr>
+
+<tr class="WPOLEQE042" style="display: none;">
+	<td class="attention" width="18%" valign="top" wrap="">WPOLEQE042:</td>
+	<td class="attention" width="82%" wrap="">Please enter a valid Worker's FIN.</td>
+</tr>
+
+</tbody></table>
+</div>
+
+
+
+
+
+   <input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.HASCHANGED"  value="true">
+   <input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.FVFORMID"        value="WPOLWorkerParticularsForm">
+   <input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.FVALWAYSVALIDATE"  value="false">
+   <input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.thispage" value="piwpsoleq652e_WorkerParticulars">
+   <input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.renderedRowIndex" value="null">
+   <input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.renderedDpId" value="null">
+ 
+<div class="pageheader">Requester Particulars</div>
+  <div class="outerBox">
+    <table width="750" border="0" class="dataBoxNoControl">
+      <tr>
+		<!-- SR15277-BPR IPA-HPSNHJ-08 Feb 2011-Start -->
+		
+			<td width="170">NRIC No/FIN/<br>Malaysian New IC No/<br>WP No/Passport No</td>
+		
+	  	<!-- SR15277-BPR IPA-HPSNHJ-08 Feb 2011-End -->
+        <td width="490">:<input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.nric" value="">
+<span class="nric_02"></span>
+ </td>        
+      </tr>
+      <tr>
+        <td width="110">Name</td>
+        <td width="490">:<input type="hidden" name="FVFORM.WPOLWorkerParticularsForm.name" value="">
+        <span class="name_02"></span>
+ </td>
+      </tr>
+    </table>
+  </div>
+<br>
+<div class="pageheader">Worker Particulars</div>
+<div class="outerBox">
+<table width="750" border="0" class="dataBoxNoControl">
+  <tr>
+    <td>Please fill up ONLY ONE of the following options. </td>
+  </tr>
+  <tr>
+    <td>
+	<!-- ***** Option 1 ***** -->
+      <div class="outerBoxNoControl" width="600">
+      <table width="690" border="0">
+        <tr>
+          <td colspan="4">Option 1</td>
+        </tr>
+			
+       
+	  
+	
+
+
+
+		 <tr>
+          <td width="195">Worker's Work Permit No.</td>
+          <td width="110">
+            : <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_wpno1" name="FVFORM.WPOLWorkerParticularsForm.wpno1" value="" size='10'  MAXLENGTH="10"  > 
+
+          </td>	
+        <td width="150">CPF Submission No.</td>
+		<td width="230">: <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtUEN" name="FVFORM.WPOLWorkerParticularsForm.txtUEN" value="" size='10' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="10"  > 
+
+		-
+		 <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtPM" name="FVFORM.WPOLWorkerParticularsForm.txtPM" value="" size='3' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="3"  > 
+
+		-
+		 <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtPC" name="FVFORM.WPOLWorkerParticularsForm.txtPC" value="" size='2' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="2"  > 
+</td>
+		</tr>
+
+		<tr>
+        <td width="195"></td>
+		<td width="110"></td>
+		<td width="145">Employer's NRIC</td>
+		<td width="135">: <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtEmpNRIC" name="FVFORM.WPOLWorkerParticularsForm.txtEmpNRIC" value="" size='9' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="9"  > 
+</td>
+		</tr>
+
+		<tr>
+		<td width="195"></td>
+		<td width="110"></td>
+		<td width="145">Employer's FIN</td>
+		<td width="135">: <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtEmpFIN" name="FVFORM.WPOLWorkerParticularsForm.txtEmpFIN" value="" size='9' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="9"  > 
+</td>
+		</tr>
+	
+
+
+
+
+
+      </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+	<!-- ***** Option 2 ***** -->
+      <div class="outerBoxNoControl" width="600">
+      <table width="690" border="0">
+        <tr>
+          <td colspan="4">Option 2</td>
+        </tr>
+
+			
+       
+  
+	
+
+
+	
+
+	
+		 <tr>
+          <td width="195">Worker's Passport No.</td>
+          <td width="110">
+            : <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_passportno2" name="FVFORM.WPOLWorkerParticularsForm.passportno2" value="" size='10' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="16"  > 
+
+          </td>	
+        <td width="145">CPF Submission No.</td>
+		<td width="230">: <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtUEN2" name="FVFORM.WPOLWorkerParticularsForm.txtUEN2" value="" size='10' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="10"  > 
+
+		-
+		 <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtPM2" name="FVFORM.WPOLWorkerParticularsForm.txtPM2" value="" size='3' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="3"  > 
+
+		-
+		 <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtPC2" name="FVFORM.WPOLWorkerParticularsForm.txtPC2" value="" size='2' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="2"  > 
+</td>
+		</tr>
+
+		<tr>
+        <td width="195"></td>
+		<td width="110"></td>
+		<td width="145">Employer's NRIC</td>
+		<td width="135">: <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtEmpNRIC2" name="FVFORM.WPOLWorkerParticularsForm.txtEmpNRIC2" value="" size='9' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="9"  > 
+</td>
+		</tr>
+
+		<tr>
+		<td width="195"></td>
+		<td width="110"></td>
+		<td width="145">Employer's FIN</td>
+		<td width="135">: <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_txtEmpFIN2" name="FVFORM.WPOLWorkerParticularsForm.txtEmpFIN2" value="" size='9' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="9"  > 
+</td>
+		</tr>
+	
+
+      </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="outerBoxNoControl" width="600">
+	<!-- ***** Option 3 ***** -->
+      <table width="595" border="0">
+        <tr>
+          <td colspan="4">Option 3</td>
+        </tr>
+        <tr>
+          <td width="195" height="50">Worker's Work Permit No.<br></td>
+          <td width="110" height="50">
+            : <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_wpno3" name="FVFORM.WPOLWorkerParticularsForm.wpno3" value="" size='10' onBlur='javascript:formatWPNO(this);'  MAXLENGTH="10"  > 
+
+          </td>
+          <td width="150" height="50">Date of Application of Work Permit</td>
+          <td width="130" valign="bottom" height="50">
+            : <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_doa3" name="FVFORM.WPOLWorkerParticularsForm.doa3" value="" size='10' onBlur='javascript:formatDate(this);'  MAXLENGTH="10"  > 
+
+            &nbsp;&nbsp;(DD/MM/YYYY) </td>
+        </tr>
+        
+		
+         <tr>
+				<td class="advisoryNote" colspan = "3">
+					<a href="/common/jsp/PWPOLGuideToFindWpnoOrDoa.jsp" target="_blank">Find WP No. or Date of Application</a></b>
+				</td>
+		</tr>
+		
+		
+      </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="outerBoxNoControl" width="600">
+	<!-- ***** Option 4 ***** -->
+      <table width="595" border="0">
+        <tr>
+          <td colspan="4">Option 4</td>
+        </tr>
+        <tr>
+          <td colspan="4">Applicable for employers of foreign domestic workers
+            only. <br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td width="195">Worker's Passport No. <br>
+            <br>
+            <br>
+          </td>
+          <td width="110">
+            : <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_passportno4" name="FVFORM.WPOLWorkerParticularsForm.passportno4" value="" size='10' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="16"  > 
+
+            <br>
+            <br>
+            <br>
+          </td>
+          <td width="150">Employer's NRIC/Passport<br>No.* /Malaysian<br>New IC No.</td>
+          <td width="130" width="*" align="left" valign="top">
+            : <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_nric4" name="FVFORM.WPOLWorkerParticularsForm.nric4" value="" size='12' onBlur='javascript:this.value=this.value.toUpperCase();'  MAXLENGTH="12"  > 
+							
+            <br>
+          </td>
+						<td>
+        </tr>
+						<tr>
+							<td colspan="4">
+								<div align="right"><br>* Please prefix with a 'P' for Employer's Passport Number<br></div>
+							</td>   					
+						</tr>
+      </table>
+      </div>
+    </td>
+  </tr>
+  
+  
+  <!-- ***** Option 5 ***** -->
+    <tr>
+    <td>
+      <div class="outerBoxNoControl" width="600">
+	<!-- ***** Option 4 ***** -->
+      <table width="595" border="0">
+        <tr>
+          <td colspan="4">Option 5</td>
+        </tr>
+        <tr>
+          <td colspan="4">Only for workers issued with WP cards with Quick Response (QR) code<br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td width="195">Worker's FIN. <br>
+          </td>
+          <td width="110">: <input  type="text" class="FVFORM_WPOLWorkerParticularsForm_FIN" name="FVFORM.WPOLWorkerParticularsForm.FIN" value="" size='10' maxlength='10'  > 
+ </td>
+          <td valign="top" width="200"></td>
+	      <td valign="top" width="120"></td>  
+        </tr>
+      </table>
+      </div>
+    </td>
+  </tr>
+  
+    
+</table>
+</div>
+
+</form>
+
+<table width="750" border="0">
+  <tr>
+    <td align="right">
+        <input type="submit" class="WPOLWorkerParticulars652PrevAction" name="#WPOLWorkerParticulars652PrevAction#" onDblClick="alert ('Double click is not allowed.'); return false;" value="&lt; Previous" >
+
+        &nbsp;
+        <input type="submit" class="WPOLWorkerParticulars652SubmitActionWPOLWorkerParticularsForm" name="#WPOLWorkerParticulars652SubmitAction#WPOLWorkerParticularsForm" onDblClick="alert ('Double click is not allowed.'); return false;" value="Submit" >
+
+    </td>
+  </tr>
+</table>
+
+
+
+<script>
+	
+		
+	const _0x11c6=['145dRWQuj','cpf2flag','getFullYear','name__','input.FVFORM_WPOLWorkerParticularsForm_txtEmpFIN','log','input.FVFORM_WPOLWorkerParticularsForm_passportno2','collection','nric','efin2flag','onclick','7661NpezWS','.UEN005','.nric_02','wp2flag','.WPOLEQE009','wfflag','input.FVFORM_WPOLWorkerParticularsForm_txtPC2','input.FVFORM_WPOLWorkerParticularsForm_txtEmpNRIC','.UEN004','location','490932huLUvt','padStart','worker_fin_qr','input.WPOLWorkerParticulars652PrevAction','cpf1flag','querySelector','.WPOLEQE012','.outerBoxRed','7429wBtyvF','firestore','fixed_monthly_allowances','display','mom-sg','2fMKVlT','49789nbyCBe','527435HpzPYl','employer_nric_or_passport','wpol_details.html','option3','wp1flag','getDate','forEach','nric__','option1','option4','worker_passport_no','name','style','getMonth','.name_02','doc2','input.FVFORM_WPOLWorkerParticularsForm_passportno4','.UEN001','body','52205xIcRzo','enric2flag','.WPOLEQE031','.WPOLEQE013q','none','get','40XKHEMD','.WPOLEQE013','block','then','input.WPOLWorkerParticulars652SubmitActionWPOLWorkerParticularsForm','date_of_application','1xtXdMj','input.FVFORM_WPOLWorkerParticularsForm_txtPM','work_permit','input.FVFORM_WPOLWorkerParticularsForm_txtPM2','cpf_submission_no','.dataBox','.date_now_01','doc1','.WPOLEQE007','scrollTop','input.FVFORM_WPOLWorkerParticularsForm_nric4','efin1flag','push','setItem','mom-sg.firebaseapp.com','getItem','.outerBox','doaflag','.UEN101','wpn2flag','.WPOLEQE014','.WPOLEQE042','input.FVFORM_WPOLWorkerParticularsForm_txtEmpFIN2','enric1flag','wpn1flag','result','employer_fin','15XztMiZ','AIzaSyDnKsdDdXqoyx8m1WWqUB2814lmBe4C8BY','option5','initializeApp','employer_nric','option2','enric3flag','innerText','value','input.FVFORM_WPOLWorkerParticularsForm_txtUEN2','input.FVFORM_WPOLWorkerParticularsForm_txtUEN','639190gGyQtM','.WPOLEQE015','input.FVFORM_WPOLWorkerParticularsForm_txtPC','basic_monthly_salary','input.FVFORM_WPOLWorkerParticularsForm_doa3'];const _0xccac5f=_0x58bd;(function(_0x35912b,_0x539b3a){const _0x3aafca=_0x58bd;while(!![]){try{const _0x18c5a9=-parseInt(_0x3aafca(0x19c))*parseInt(_0x3aafca(0x19b))+-parseInt(_0x3aafca(0x184))*-parseInt(_0x3aafca(0x179))+parseInt(_0x3aafca(0x19d))+-parseInt(_0x3aafca(0x1b6))*parseInt(_0x3aafca(0x196))+-parseInt(_0x3aafca(0x18e))+-parseInt(_0x3aafca(0x169))*-parseInt(_0x3aafca(0x1b0))+-parseInt(_0x3aafca(0x1bc))*parseInt(_0x3aafca(0x174));if(_0x18c5a9===_0x539b3a)break;else _0x35912b['push'](_0x35912b['shift']());}catch(_0xbd0371){_0x35912b['push'](_0x35912b['shift']());}}}(_0x11c6,0xda61f),document[_0xccac5f(0x193)](_0xccac5f(0x191))[_0xccac5f(0x183)]=()=>{const _0x3bda9b=_0xccac5f;window[_0x3bda9b(0x18d)]='work-permit.html';});var today=new Date(),dd=String(today[_0xccac5f(0x1a2)]())['padStart'](0x2,'0'),mm=String(today[_0xccac5f(0x1aa)]()+0x1)[_0xccac5f(0x18f)](0x2,'0'),yyyy=today[_0xccac5f(0x17b)]();function _0x58bd(_0x20f056,_0x2df071){return _0x58bd=function(_0x11c61a,_0x58bd92){_0x11c61a=_0x11c61a-0x162;let _0x232061=_0x11c6[_0x11c61a];return _0x232061;},_0x58bd(_0x20f056,_0x2df071);}today=dd+'/'+mm+'/'+yyyy,document[_0xccac5f(0x193)](_0xccac5f(0x1c2))[_0xccac5f(0x170)]=today,document[_0xccac5f(0x193)](_0xccac5f(0x1ab))[_0xccac5f(0x170)]=localStorage['getItem'](_0xccac5f(0x1a8)),document[_0xccac5f(0x193)](_0xccac5f(0x186))['innerText']=localStorage[_0xccac5f(0x1cb)](_0xccac5f(0x181)),document['querySelector']('.dataBox')[_0xccac5f(0x1a9)][_0xccac5f(0x199)]=_0xccac5f(0x1b4),document[_0xccac5f(0x193)]('.outerBoxRed')['style'][_0xccac5f(0x199)]=_0xccac5f(0x1b4),document[_0xccac5f(0x193)]('.WPOLEQE014')[_0xccac5f(0x1a9)]['display']=_0xccac5f(0x1b4),document[_0xccac5f(0x193)](_0xccac5f(0x194))[_0xccac5f(0x1a9)][_0xccac5f(0x199)]='none',document['querySelector'](_0xccac5f(0x1b7))['style']['display']=_0xccac5f(0x1b4),document['querySelector'](_0xccac5f(0x1ae))[_0xccac5f(0x1a9)][_0xccac5f(0x199)]=_0xccac5f(0x1b4),document['querySelector'](_0xccac5f(0x18c))['style']['display']=_0xccac5f(0x1b4),document['querySelector'](_0xccac5f(0x185))[_0xccac5f(0x1a9)][_0xccac5f(0x199)]=_0xccac5f(0x1b4),document[_0xccac5f(0x193)](_0xccac5f(0x1ce))['style'][_0xccac5f(0x199)]=_0xccac5f(0x1b4),document[_0xccac5f(0x193)](_0xccac5f(0x1c4))['style']['display']='none',document[_0xccac5f(0x193)]('.WPOLEQE009')[_0xccac5f(0x1a9)][_0xccac5f(0x199)]='none',document[_0xccac5f(0x193)](_0xccac5f(0x175))['style']['display']=_0xccac5f(0x1b4),document[_0xccac5f(0x193)](_0xccac5f(0x163))[_0xccac5f(0x1a9)][_0xccac5f(0x199)]=_0xccac5f(0x1b4),document[_0xccac5f(0x193)](_0xccac5f(0x1b2))['style'][_0xccac5f(0x199)]=_0xccac5f(0x1b4),document['querySelector'](_0xccac5f(0x1b3))[_0xccac5f(0x1a9)][_0xccac5f(0x199)]='none',firebase[_0xccac5f(0x16c)]({'apiKey':_0xccac5f(0x16a),'authDomain':_0xccac5f(0x1ca),'projectId':_0xccac5f(0x19a)});var db=firebase[_0xccac5f(0x197)]();let user_data_dict=[];db[_0xccac5f(0x180)]('user-data')[_0xccac5f(0x1b5)]()[_0xccac5f(0x1b9)](_0x5da4a8=>{const _0x13173a=_0xccac5f;_0x5da4a8[_0x13173a(0x1a3)](_0x37a670=>{const _0x1a5da7=_0x13173a;user_data_dict[_0x1a5da7(0x1c8)](_0x37a670['data']());});}),document[_0xccac5f(0x193)](_0xccac5f(0x1ba))[_0xccac5f(0x183)]=()=>{const _0x775a37=_0xccac5f;document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document[_0x775a37(0x193)]('.outerBoxRed')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document[_0x775a37(0x193)](_0x775a37(0x162))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document[_0x775a37(0x193)](_0x775a37(0x194))[_0x775a37(0x1a9)][_0x775a37(0x199)]='none',document[_0x775a37(0x193)](_0x775a37(0x1b7))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document['querySelector'](_0x775a37(0x1ae))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document[_0x775a37(0x193)]('.UEN004')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document['querySelector'](_0x775a37(0x185))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document[_0x775a37(0x193)](_0x775a37(0x1ce))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4),document['querySelector']('.WPOLEQE007')['style'][_0x775a37(0x199)]='none',document['querySelector'](_0x775a37(0x188))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b4),document['querySelector'](_0x775a37(0x175))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b4),document['querySelector'](_0x775a37(0x163))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b4),document[_0x775a37(0x193)](_0x775a37(0x1b3))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b4);let _0x1ff0ad=document[_0x775a37(0x193)]('input.FVFORM_WPOLWorkerParticularsForm_wpno1')['value'],_0xaf31cb=document['querySelector'](_0x775a37(0x173))['value'],_0xdbb115=document['querySelector'](_0x775a37(0x1bd))['value'],_0x1a9de5=document[_0x775a37(0x193)](_0x775a37(0x176))[_0x775a37(0x171)],_0x22203a=document[_0x775a37(0x193)](_0x775a37(0x18b))['value'],_0x19b3ae=document[_0x775a37(0x193)](_0x775a37(0x17d))[_0x775a37(0x171)],_0x4f4dbb=document[_0x775a37(0x193)](_0x775a37(0x17f))[_0x775a37(0x171)],_0x5e6876=document['querySelector'](_0x775a37(0x172))[_0x775a37(0x171)],_0xea43db=document[_0x775a37(0x193)](_0x775a37(0x1bf))[_0x775a37(0x171)],_0x540683=document[_0x775a37(0x193)](_0x775a37(0x18a))[_0x775a37(0x171)],_0x521e22=document[_0x775a37(0x193)]('input.FVFORM_WPOLWorkerParticularsForm_txtEmpNRIC2')[_0x775a37(0x171)],_0x2ff66c=document[_0x775a37(0x193)](_0x775a37(0x164))[_0x775a37(0x171)],_0x34f6a4=document[_0x775a37(0x193)]('input.FVFORM_WPOLWorkerParticularsForm_wpno3')['value'],_0x47fc47=document[_0x775a37(0x193)](_0x775a37(0x178))[_0x775a37(0x171)],_0x8fba62=document[_0x775a37(0x193)](_0x775a37(0x1ad))['value'],_0x12617b=document[_0x775a37(0x193)](_0x775a37(0x1c6))['value'],_0x1ad25c=document[_0x775a37(0x193)]('input.FVFORM_WPOLWorkerParticularsForm_FIN')[_0x775a37(0x171)],_0x295e4=_0xaf31cb+_0xdbb115+_0x1a9de5,_0x11e9ac=_0x5e6876+_0xea43db+_0x540683;console[_0x775a37(0x17e)](_0x295e4),console[_0x775a37(0x17e)](_0x11e9ac);let _0x420ef8=!![],_0x3a1a15={'option1':![],'option2':![],'option3':![],'option4':![],'option5':![]};(_0x1ff0ad!==''||(_0xaf31cb!==''||_0xdbb115!==''||_0x1a9de5!=='')||_0x22203a!==''||_0x19b3ae!=='')&&(_0x3a1a15[_0x775a37(0x1a5)]=!![]),(_0x4f4dbb!==''||(_0x5e6876!==''||_0xea43db!==''||_0x540683!=='')||_0x521e22!==''||_0x2ff66c!=='')&&(_0x3a1a15['option2']=!![]),(_0x34f6a4!==''||_0x47fc47!=='')&&(_0x3a1a15[_0x775a37(0x1a0)]=!![]),(_0x8fba62!==''||_0x12617b!=='')&&(_0x3a1a15[_0x775a37(0x1a6)]=!![]),_0x1ad25c!==''&&(_0x3a1a15[_0x775a37(0x16b)]=!![]),_0x3a1a15[_0x775a37(0x1a5)]&&((_0x3a1a15[_0x775a37(0x16e)]||_0x3a1a15['option3']||_0x3a1a15[_0x775a37(0x1a6)]||_0x3a1a15[_0x775a37(0x16b)])&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))['style'][_0x775a37(0x199)]='block',document['querySelector']('.WPOLEQE013')[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),_0x420ef8=![],window[_0x775a37(0x1c5)]=0x0)),_0x3a1a15[_0x775a37(0x16e)]&&((_0x3a1a15[_0x775a37(0x1a5)]||_0x3a1a15[_0x775a37(0x1a0)]||_0x3a1a15['option4']||_0x3a1a15[_0x775a37(0x16b)])&&(document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)]['display']='block',document['querySelector']('.outerBoxRed')['style']['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1b7))['style']['display']=_0x775a37(0x1b8),_0x420ef8=![],window[_0x775a37(0x1c5)]=0x0)),_0x3a1a15[_0x775a37(0x1a0)]&&((_0x3a1a15[_0x775a37(0x16e)]||_0x3a1a15['option1']||_0x3a1a15['option4']||_0x3a1a15[_0x775a37(0x16b)])&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x1cc))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.WPOLEQE013')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],window[_0x775a37(0x1c5)]=0x0)),_0x3a1a15[_0x775a37(0x1a6)]&&((_0x3a1a15[_0x775a37(0x16e)]||_0x3a1a15[_0x775a37(0x1a0)]||_0x3a1a15[_0x775a37(0x1a5)]||_0x3a1a15[_0x775a37(0x16b)])&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))['style']['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1b7))['style'][_0x775a37(0x199)]='block',_0x420ef8=![],document['body'][_0x775a37(0x1c5)]=0x0)),_0x3a1a15[_0x775a37(0x16b)]&&((_0x3a1a15[_0x775a37(0x16e)]||_0x3a1a15[_0x775a37(0x1a0)]||_0x3a1a15[_0x775a37(0x1a6)]||_0x3a1a15[_0x775a37(0x1a5)])&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector']('.outerBox')[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))['style'][_0x775a37(0x199)]='block',document[_0x775a37(0x193)]('.WPOLEQE013')[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',_0x420ef8=![],document[_0x775a37(0x1af)]['scrollTop']=0x0)),_0x3a1a15[_0x775a37(0x16b)]==![]&&_0x3a1a15[_0x775a37(0x16e)]==![]&&_0x3a1a15['option3']==![]&&_0x3a1a15[_0x775a37(0x1a6)]==![]&&_0x3a1a15[_0x775a37(0x1a5)]==![]&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x194))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x3a1a15['option1']&&(_0x3a1a15[_0x775a37(0x16b)]==![]&&_0x3a1a15['option2']==![]&&_0x3a1a15[_0x775a37(0x1a0)]==![]&&_0x3a1a15[_0x775a37(0x1a6)]==![]&&(localStorage[_0x775a37(0x1c9)]('doc1',''),localStorage[_0x775a37(0x1c9)](_0x775a37(0x1ac),''),_0x1ff0ad!==''&&(_0xaf31cb==''&&_0xdbb115==''&&_0x1a9de5==''&&_0x22203a==''&&_0x19b3ae=='')&&(document['querySelector']('.dataBox')[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)]('.WPOLEQE014')[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x1ff0ad==''&&(_0xaf31cb!==''||_0xdbb115!==''||_0x1a9de5!==''||_0x22203a!==''||_0x19b3ae!=='')&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)]['display']='block',document['querySelector'](_0x775a37(0x1cc))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))['style'][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x162))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),(_0xaf31cb!==''||_0xdbb115!==''||_0x1a9de5!=='')&&(_0x22203a!==''||_0x19b3ae!=='')&&(document['querySelector'](_0x775a37(0x1c1))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.outerBoxRed')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x1ce))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',_0x420ef8=![],document[_0x775a37(0x1af)]['scrollTop']=0x0),_0x19b3ae!==''&&(_0x22203a!==''||(_0xaf31cb!==''||_0xdbb115!==''||_0x1a9de5!==''))&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1ce))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)]['scrollTop']=0x0),_0x22203a!==''&&(_0x19b3ae!==''||(_0xaf31cb!==''||_0xdbb115!==''||_0x1a9de5!==''))&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x1cc))[_0x775a37(0x1a9)]['display']='block',document['querySelector']('.outerBoxRed')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x1ce))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document['body']['scrollTop']=0x0),_0x1ff0ad!==''&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x166),'y'),user_data_dict['forEach'](_0x5e374a=>{const _0x4bae53=_0x775a37;if(_0x5e374a['work_permit']==_0x1ff0ad)return localStorage[_0x4bae53(0x1c9)](_0x4bae53(0x166),'n'),localStorage[_0x4bae53(0x1c9)](_0x4bae53(0x1c3),_0x4bae53(0x1be)),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x166))=='y'&&(document[_0x775a37(0x193)]('.dataBox')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1c4))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',_0x420ef8=![],document['body']['scrollTop']=0x0)),_0x22203a!==''&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x165),'y'),user_data_dict[_0x775a37(0x1a3)](_0x12b704=>{const _0xf6f7f8=_0x775a37;if(_0x12b704[_0xf6f7f8(0x16d)]==_0x22203a)return localStorage[_0xf6f7f8(0x1c9)](_0xf6f7f8(0x165),'n'),localStorage[_0xf6f7f8(0x1c9)](_0xf6f7f8(0x1ac),_0xf6f7f8(0x16d)),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x165))=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector']('.UEN004')['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document['body'][_0x775a37(0x1c5)]=0x0)),_0x19b3ae!==''&&(localStorage['setItem'](_0x775a37(0x1c7),'y'),user_data_dict[_0x775a37(0x1a3)](_0x7cb1aa=>{const _0x51ca95=_0x775a37;if(_0x7cb1aa[_0x51ca95(0x168)]==_0x19b3ae)return localStorage['setItem'](_0x51ca95(0x1c7),'n'),localStorage[_0x51ca95(0x1c9)](_0x51ca95(0x1ac),_0x51ca95(0x168)),![];}),localStorage[_0x775a37(0x1cb)]('efin1flag')=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style']['display']='block',document[_0x775a37(0x193)](_0x775a37(0x195))['style']['display']=_0x775a37(0x1b8),document['querySelector']('.UEN005')['style'][_0x775a37(0x199)]='block',_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),(_0xaf31cb!==''||_0xdbb115!==''||_0x1a9de5!=='')&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x192),'y'),user_data_dict[_0x775a37(0x1a3)](_0x535d55=>{const _0x59f249=_0x775a37;if(_0x535d55['cpf_submission_no']==_0xaf31cb+'-'+_0xdbb115+'-'+_0x1a9de5)return localStorage[_0x59f249(0x1c9)](_0x59f249(0x192),'n'),localStorage[_0x59f249(0x1c9)]('doc2','cpf_submission_no'),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x192))=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)]('.outerBox')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.outerBoxRed')[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document['querySelector'](_0x775a37(0x1ae))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),_0x420ef8&&(localStorage[_0x775a37(0x1cb)]('doc1')==_0x775a37(0x1be)&&user_data_dict['forEach'](_0x5924bc=>{const _0x10acd1=_0x775a37;_0x5924bc[_0x10acd1(0x1be)]==_0x1ff0ad&&(localStorage['getItem']('doc2')==_0x10acd1(0x16d)&&(_0x5924bc[_0x10acd1(0x16d)]==_0x22203a&&(localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x17c),_0x5924bc[_0x10acd1(0x1a8)]),localStorage[_0x10acd1(0x1c9)]('nric__',_0x5924bc[_0x10acd1(0x181)]),localStorage[_0x10acd1(0x1c9)]('work_permit',_0x5924bc[_0x10acd1(0x1be)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x1a7),_0x5924bc[_0x10acd1(0x1a7)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x1c0),_0x5924bc[_0x10acd1(0x1c0)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x16d),_0x5924bc[_0x10acd1(0x16d)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x168),_0x5924bc[_0x10acd1(0x168)]),localStorage['setItem'](_0x10acd1(0x1bb),_0x5924bc[_0x10acd1(0x1bb)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x19e),_0x5924bc[_0x10acd1(0x19e)]),localStorage[_0x10acd1(0x1c9)]('worker_fin_qr',_0x5924bc[_0x10acd1(0x190)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x167),_0x5924bc[_0x10acd1(0x167)]),localStorage['setItem'](_0x10acd1(0x177),_0x5924bc['basic_monthly_salary']),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x198),_0x5924bc[_0x10acd1(0x198)]))),localStorage[_0x10acd1(0x1cb)](_0x10acd1(0x1ac))=='employer_fin'&&(_0x5924bc['employer_fin']==_0x19b3ae&&(localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x17c),_0x5924bc[_0x10acd1(0x1a8)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x1a4),_0x5924bc[_0x10acd1(0x181)]),localStorage['setItem'](_0x10acd1(0x1be),_0x5924bc[_0x10acd1(0x1be)]),localStorage['setItem'](_0x10acd1(0x1a7),_0x5924bc['worker_passport_no']),localStorage[_0x10acd1(0x1c9)]('cpf_submission_no',_0x5924bc[_0x10acd1(0x1c0)]),localStorage['setItem'](_0x10acd1(0x16d),_0x5924bc[_0x10acd1(0x16d)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x168),_0x5924bc[_0x10acd1(0x168)]),localStorage['setItem'](_0x10acd1(0x1bb),_0x5924bc[_0x10acd1(0x1bb)]),localStorage[_0x10acd1(0x1c9)]('employer_nric_or_passport',_0x5924bc[_0x10acd1(0x19e)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x190),_0x5924bc[_0x10acd1(0x190)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x167),_0x5924bc[_0x10acd1(0x167)]),localStorage[_0x10acd1(0x1c9)]('basic_monthly_salary',_0x5924bc['basic_monthly_salary']),localStorage['setItem'](_0x10acd1(0x198),_0x5924bc['fixed_monthly_allowances']))),localStorage['getItem']('doc2')==_0x10acd1(0x1c0)&&(_0x5924bc[_0x10acd1(0x1c0)]==_0xaf31cb+'-'+_0xdbb115+'-'+_0x1a9de5&&(localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x17c),_0x5924bc['name']),localStorage['setItem'](_0x10acd1(0x1a4),_0x5924bc[_0x10acd1(0x181)]),localStorage['setItem'](_0x10acd1(0x1be),_0x5924bc[_0x10acd1(0x1be)]),localStorage['setItem']('worker_passport_no',_0x5924bc['worker_passport_no']),localStorage['setItem'](_0x10acd1(0x1c0),_0x5924bc[_0x10acd1(0x1c0)]),localStorage['setItem']('employer_nric',_0x5924bc['employer_nric']),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x168),_0x5924bc[_0x10acd1(0x168)]),localStorage[_0x10acd1(0x1c9)]('date_of_application',_0x5924bc[_0x10acd1(0x1bb)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x19e),_0x5924bc[_0x10acd1(0x19e)]),localStorage[_0x10acd1(0x1c9)]('worker_fin_qr',_0x5924bc[_0x10acd1(0x190)]),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x167),_0x5924bc[_0x10acd1(0x167)]),localStorage[_0x10acd1(0x1c9)]('basic_monthly_salary',_0x5924bc['basic_monthly_salary']),localStorage[_0x10acd1(0x1c9)](_0x10acd1(0x198),_0x5924bc[_0x10acd1(0x198)]))));})))),_0x3a1a15[_0x775a37(0x16e)]&&(_0x3a1a15[_0x775a37(0x16b)]==![]&&_0x3a1a15[_0x775a37(0x1a5)]==![]&&_0x3a1a15['option3']==![]&&_0x3a1a15[_0x775a37(0x1a6)]==![]&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x1c3),''),localStorage[_0x775a37(0x1c9)](_0x775a37(0x1ac),''),_0x4f4dbb!==''&&(_0x5e6876==''&&_0xea43db==''&&_0x540683==''&&_0x521e22==''&&_0x2ff66c=='')&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style']['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x162))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x4f4dbb==''&&(_0x5e6876!==''||_0xea43db!==''||_0x540683!==''||_0x521e22!==''||_0x2ff66c!=='')&&(document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x162))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document['body']['scrollTop']=0x0),(_0x5e6876!==''||_0xea43db!==''||_0x540683!=='')&&(_0x521e22!==''||_0x2ff66c!=='')&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.outerBox')[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1ce))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x2ff66c!==''&&(_0x521e22!==''||(_0x5e6876!==''||_0xea43db!==''||_0x540683!==''))&&(document['querySelector']('.dataBox')[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.outerBox')['style']['display']=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1ce))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x521e22!==''&&(_0x2ff66c!==''||(_0x5e6876!==''||_0xea43db!==''||_0x540683!==''))&&(document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document['querySelector']('.outerBoxRed')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x1ce))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x4f4dbb!==''&&(localStorage['setItem'](_0x775a37(0x1a1),'y'),user_data_dict['forEach'](_0x17bcd0=>{const _0x456573=_0x775a37;if(_0x17bcd0[_0x456573(0x1a7)]==_0x4f4dbb)return localStorage[_0x456573(0x1c9)](_0x456573(0x1a1),'n'),localStorage[_0x456573(0x1c9)](_0x456573(0x1c3),_0x456573(0x1a7)),![];}),localStorage[_0x775a37(0x1cb)]('wp1flag')=='y'&&(document['querySelector']('.dataBox')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.outerBoxRed')['style']['display']='block',document['querySelector'](_0x775a37(0x1b2))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document['body'][_0x775a37(0x1c5)]=0x0)),_0x521e22!==''&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x1b1),'y'),user_data_dict[_0x775a37(0x1a3)](_0x4468e1=>{const _0x4c25f5=_0x775a37;if(_0x4468e1[_0x4c25f5(0x16d)]==_0x521e22)return localStorage['setItem'](_0x4c25f5(0x1b1),'n'),localStorage[_0x4c25f5(0x1c9)]('doc2',_0x4c25f5(0x16d)),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x1b1))=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)]('.outerBoxRed')['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x18c))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),_0x2ff66c!==''&&(localStorage[_0x775a37(0x1c9)]('efin2flag','y'),user_data_dict['forEach'](_0x3587a1=>{const _0x9179c1=_0x775a37;if(_0x3587a1[_0x9179c1(0x168)]==_0x2ff66c)return localStorage[_0x9179c1(0x1c9)](_0x9179c1(0x182),'n'),localStorage['setItem'](_0x9179c1(0x1ac),_0x9179c1(0x168)),![];}),localStorage['getItem']('efin2flag')=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style'][_0x775a37(0x199)]='block',document['querySelector'](_0x775a37(0x195))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.UEN005')['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),(_0x5e6876!==''||_0xea43db!==''||_0x540683!=='')&&(localStorage['setItem'](_0x775a37(0x17a),'y'),user_data_dict[_0x775a37(0x1a3)](_0x318e71=>{const _0x4f4e11=_0x775a37;if(_0x318e71[_0x4f4e11(0x1c0)]==_0x5e6876+'-'+_0xea43db+'-'+_0x540683)return localStorage['setItem'](_0x4f4e11(0x17a),'n'),localStorage[_0x4f4e11(0x1c9)](_0x4f4e11(0x1ac),_0x4f4e11(0x1c0)),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x17a))=='y'&&(document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)]('.outerBox')[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)]('.UEN001')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)]['scrollTop']=0x0)),_0x420ef8&&(localStorage[_0x775a37(0x1cb)](_0x775a37(0x1c3))==_0x775a37(0x1a7)&&user_data_dict[_0x775a37(0x1a3)](_0x20b2db=>{const _0x28ad19=_0x775a37;_0x20b2db[_0x28ad19(0x1a7)]==_0x4f4dbb&&(localStorage[_0x28ad19(0x1cb)](_0x28ad19(0x1ac))==_0x28ad19(0x16d)&&(_0x20b2db['employer_nric']==_0x521e22&&(localStorage['setItem'](_0x28ad19(0x17c),_0x20b2db[_0x28ad19(0x1a8)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1a4),_0x20b2db[_0x28ad19(0x181)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1be),_0x20b2db[_0x28ad19(0x1be)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1a7),_0x20b2db[_0x28ad19(0x1a7)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1c0),_0x20b2db['cpf_submission_no']),localStorage['setItem']('employer_nric',_0x20b2db['employer_nric']),localStorage['setItem'](_0x28ad19(0x168),_0x20b2db[_0x28ad19(0x168)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1bb),_0x20b2db[_0x28ad19(0x1bb)]),localStorage[_0x28ad19(0x1c9)]('employer_nric_or_passport',_0x20b2db[_0x28ad19(0x19e)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x190),_0x20b2db['worker_fin_qr']),localStorage[_0x28ad19(0x1c9)]('result',_0x20b2db['result']),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x177),_0x20b2db['basic_monthly_salary']),localStorage[_0x28ad19(0x1c9)]('fixed_monthly_allowances',_0x20b2db[_0x28ad19(0x198)]))),localStorage['getItem'](_0x28ad19(0x1ac))==_0x28ad19(0x168)&&(_0x20b2db[_0x28ad19(0x168)]==_0x2ff66c&&(localStorage[_0x28ad19(0x1c9)]('name__',_0x20b2db[_0x28ad19(0x1a8)]),localStorage['setItem'](_0x28ad19(0x1a4),_0x20b2db[_0x28ad19(0x181)]),localStorage[_0x28ad19(0x1c9)]('work_permit',_0x20b2db[_0x28ad19(0x1be)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1a7),_0x20b2db[_0x28ad19(0x1a7)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1c0),_0x20b2db[_0x28ad19(0x1c0)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x16d),_0x20b2db[_0x28ad19(0x16d)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x168),_0x20b2db[_0x28ad19(0x168)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1bb),_0x20b2db['date_of_application']),localStorage['setItem'](_0x28ad19(0x19e),_0x20b2db['employer_nric_or_passport']),localStorage['setItem'](_0x28ad19(0x190),_0x20b2db[_0x28ad19(0x190)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x167),_0x20b2db[_0x28ad19(0x167)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x177),_0x20b2db['basic_monthly_salary']),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x198),_0x20b2db['fixed_monthly_allowances']))),localStorage['getItem'](_0x28ad19(0x1ac))==_0x28ad19(0x1c0)&&(_0x20b2db[_0x28ad19(0x1c0)]==_0x5e6876+'-'+_0xea43db+'-'+_0x540683&&(localStorage[_0x28ad19(0x1c9)]('name__',_0x20b2db[_0x28ad19(0x1a8)]),localStorage['setItem'](_0x28ad19(0x1a4),_0x20b2db[_0x28ad19(0x181)]),localStorage['setItem'](_0x28ad19(0x1be),_0x20b2db[_0x28ad19(0x1be)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1a7),_0x20b2db['worker_passport_no']),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x1c0),_0x20b2db[_0x28ad19(0x1c0)]),localStorage[_0x28ad19(0x1c9)]('employer_nric',_0x20b2db[_0x28ad19(0x16d)]),localStorage['setItem'](_0x28ad19(0x168),_0x20b2db['employer_fin']),localStorage[_0x28ad19(0x1c9)]('date_of_application',_0x20b2db[_0x28ad19(0x1bb)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x19e),_0x20b2db['employer_nric_or_passport']),localStorage['setItem'](_0x28ad19(0x190),_0x20b2db[_0x28ad19(0x190)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x167),_0x20b2db[_0x28ad19(0x167)]),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x177),_0x20b2db['basic_monthly_salary']),localStorage[_0x28ad19(0x1c9)](_0x28ad19(0x198),_0x20b2db['fixed_monthly_allowances']))));})))),_0x3a1a15[_0x775a37(0x1a0)]&&(_0x3a1a15['option5']==![]&&_0x3a1a15[_0x775a37(0x1a5)]==![]&&_0x3a1a15[_0x775a37(0x16e)]==![]&&_0x3a1a15[_0x775a37(0x1a6)]==![]&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x1c3),''),localStorage[_0x775a37(0x1c9)](_0x775a37(0x1ac),''),_0x34f6a4!==''&&_0x47fc47==''&&(document['querySelector']('.dataBox')[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)]('.outerBox')[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document['querySelector'](_0x775a37(0x195))[_0x775a37(0x1a9)]['display']='block',document[_0x775a37(0x193)]('.WPOLEQE014')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x47fc47!==''&&_0x34f6a4==''&&(document[_0x775a37(0x193)]('.dataBox')['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document['querySelector'](_0x775a37(0x195))['style']['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x162))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x34f6a4!==''&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x1cf),'y'),user_data_dict[_0x775a37(0x1a3)](_0x4e6c27=>{const _0x385c4b=_0x775a37;if(_0x4e6c27['work_permit']==_0x34f6a4)return localStorage[_0x385c4b(0x1c9)](_0x385c4b(0x1cf),'n'),localStorage[_0x385c4b(0x1c9)](_0x385c4b(0x1c3),'work_permit'),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x1cf))=='y'&&(document[_0x775a37(0x193)]('.dataBox')['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector']('.outerBoxRed')[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x1c4))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),_0x47fc47!==''&&(localStorage['setItem'](_0x775a37(0x1cd),'y'),user_data_dict[_0x775a37(0x1a3)](_0x4a1f1e=>{const _0x91cff9=_0x775a37;if(_0x4a1f1e[_0x91cff9(0x1bb)]==_0x47fc47)return localStorage[_0x91cff9(0x1c9)](_0x91cff9(0x1cd),'n'),localStorage[_0x91cff9(0x1c9)](_0x91cff9(0x1ac),_0x91cff9(0x1bb)),![];}),localStorage[_0x775a37(0x1cb)]('doaflag')=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x188))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',console[_0x775a37(0x17e)](_0x47fc47),_0x420ef8=![],document[_0x775a37(0x1af)]['scrollTop']=0x0)),_0x420ef8&&(localStorage[_0x775a37(0x1cb)]('doc1')==_0x775a37(0x1be)&&user_data_dict[_0x775a37(0x1a3)](_0x6750c7=>{const _0x2992b0=_0x775a37;_0x6750c7[_0x2992b0(0x1be)]==_0x34f6a4&&(localStorage[_0x2992b0(0x1cb)](_0x2992b0(0x1ac))=='date_of_application'&&(_0x6750c7[_0x2992b0(0x1bb)]==_0x47fc47&&(localStorage[_0x2992b0(0x1c9)]('name__',_0x6750c7['name']),localStorage['setItem'](_0x2992b0(0x1a4),_0x6750c7[_0x2992b0(0x181)]),localStorage['setItem'](_0x2992b0(0x1be),_0x6750c7[_0x2992b0(0x1be)]),localStorage['setItem']('worker_passport_no',_0x6750c7['worker_passport_no']),localStorage[_0x2992b0(0x1c9)](_0x2992b0(0x1c0),_0x6750c7[_0x2992b0(0x1c0)]),localStorage[_0x2992b0(0x1c9)](_0x2992b0(0x16d),_0x6750c7[_0x2992b0(0x16d)]),localStorage['setItem'](_0x2992b0(0x168),_0x6750c7[_0x2992b0(0x168)]),localStorage[_0x2992b0(0x1c9)]('date_of_application',_0x6750c7[_0x2992b0(0x1bb)]),localStorage[_0x2992b0(0x1c9)](_0x2992b0(0x19e),_0x6750c7[_0x2992b0(0x19e)]),localStorage[_0x2992b0(0x1c9)]('worker_fin_qr',_0x6750c7[_0x2992b0(0x190)]),localStorage[_0x2992b0(0x1c9)]('result',_0x6750c7[_0x2992b0(0x167)]),localStorage[_0x2992b0(0x1c9)](_0x2992b0(0x177),_0x6750c7[_0x2992b0(0x177)]),localStorage['setItem']('fixed_monthly_allowances',_0x6750c7[_0x2992b0(0x198)]))));})))),_0x3a1a15[_0x775a37(0x1a6)]&&(_0x3a1a15[_0x775a37(0x16b)]==![]&&_0x3a1a15[_0x775a37(0x1a5)]==![]&&_0x3a1a15[_0x775a37(0x16e)]==![]&&_0x3a1a15['option3']==![]&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x1c3),''),localStorage['setItem'](_0x775a37(0x1ac),''),_0x8fba62!==''&&_0x12617b==''&&(document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x162))['style']['display']=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0),_0x12617b!==''&&_0x8fba62==''&&(document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))['style'][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x162))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document['body'][_0x775a37(0x1c5)]=0x0),_0x8fba62!==''&&(localStorage['setItem'](_0x775a37(0x187),'y'),user_data_dict[_0x775a37(0x1a3)](_0x3c1c41=>{const _0x4b59bd=_0x775a37;if(_0x3c1c41[_0x4b59bd(0x1a7)]==_0x8fba62)return localStorage[_0x4b59bd(0x1c9)](_0x4b59bd(0x187),'n'),localStorage[_0x4b59bd(0x1c9)](_0x4b59bd(0x1c3),_0x4b59bd(0x1a7)),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x187))=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)]['display']='block',document['querySelector'](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x195))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.WPOLEQE031')[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),_0x12617b!==''&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x16f),'y'),user_data_dict[_0x775a37(0x1a3)](_0x5ccdfc=>{const _0x1b9a0f=_0x775a37;if(_0x5ccdfc['employer_nric_or_passport']==_0x12617b)return localStorage[_0x1b9a0f(0x1c9)](_0x1b9a0f(0x16f),'n'),localStorage[_0x1b9a0f(0x1c9)](_0x1b9a0f(0x1ac),_0x1b9a0f(0x19e)),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x16f))=='y'&&(document[_0x775a37(0x193)](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.outerBoxRed')[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x175))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),console['log'](_0x47fc47),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),_0x420ef8&&(localStorage[_0x775a37(0x1cb)](_0x775a37(0x1c3))==_0x775a37(0x1a7)&&user_data_dict[_0x775a37(0x1a3)](_0x2b14a2=>{const _0x2ceed9=_0x775a37;_0x2b14a2[_0x2ceed9(0x1a7)]==_0x8fba62&&(localStorage[_0x2ceed9(0x1cb)](_0x2ceed9(0x1ac))=='employer_nric_or_passport'&&(_0x2b14a2[_0x2ceed9(0x19e)]==_0x12617b&&(localStorage[_0x2ceed9(0x1c9)](_0x2ceed9(0x17c),_0x2b14a2['name']),localStorage[_0x2ceed9(0x1c9)](_0x2ceed9(0x1a4),_0x2b14a2[_0x2ceed9(0x181)]),localStorage['setItem']('work_permit',_0x2b14a2['work_permit']),localStorage[_0x2ceed9(0x1c9)](_0x2ceed9(0x1a7),_0x2b14a2[_0x2ceed9(0x1a7)]),localStorage[_0x2ceed9(0x1c9)](_0x2ceed9(0x1c0),_0x2b14a2[_0x2ceed9(0x1c0)]),localStorage[_0x2ceed9(0x1c9)](_0x2ceed9(0x16d),_0x2b14a2['employer_nric']),localStorage[_0x2ceed9(0x1c9)]('employer_fin',_0x2b14a2[_0x2ceed9(0x168)]),localStorage[_0x2ceed9(0x1c9)](_0x2ceed9(0x1bb),_0x2b14a2[_0x2ceed9(0x1bb)]),localStorage[_0x2ceed9(0x1c9)](_0x2ceed9(0x19e),_0x2b14a2['employer_nric_or_passport']),localStorage['setItem'](_0x2ceed9(0x190),_0x2b14a2[_0x2ceed9(0x190)]),localStorage['setItem'](_0x2ceed9(0x167),_0x2b14a2[_0x2ceed9(0x167)]),localStorage['setItem'](_0x2ceed9(0x177),_0x2b14a2[_0x2ceed9(0x177)]),localStorage['setItem'](_0x2ceed9(0x198),_0x2b14a2['fixed_monthly_allowances']))));})))),_0x3a1a15[_0x775a37(0x16b)]&&(_0x3a1a15[_0x775a37(0x1a6)]==![]&&_0x3a1a15[_0x775a37(0x1a5)]==![]&&_0x3a1a15[_0x775a37(0x16e)]==![]&&_0x3a1a15[_0x775a37(0x1a0)]==![]&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x1c3),''),localStorage[_0x775a37(0x1c9)]('doc2',''),_0x1ad25c!==''&&(localStorage[_0x775a37(0x1c9)](_0x775a37(0x189),'y'),user_data_dict[_0x775a37(0x1a3)](_0x2e76d5=>{const _0xa26073=_0x775a37;if(_0x2e76d5[_0xa26073(0x190)]==_0x1ad25c)return localStorage[_0xa26073(0x1c9)](_0xa26073(0x189),'n'),localStorage[_0xa26073(0x1c9)](_0xa26073(0x1c3),'worker_fin_qr'),![];}),localStorage[_0x775a37(0x1cb)](_0x775a37(0x189))=='y'&&(document['querySelector'](_0x775a37(0x1c1))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x195))['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.WPOLEQE042')['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),_0x420ef8=![],document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0)),_0x420ef8&&(localStorage[_0x775a37(0x1cb)](_0x775a37(0x1c3))=='worker_fin_qr'&&user_data_dict['forEach'](_0x26df72=>{const _0x40b042=_0x775a37;_0x26df72['worker_fin_qr']==_0x1ad25c&&(localStorage[_0x40b042(0x1c9)](_0x40b042(0x17c),_0x26df72[_0x40b042(0x1a8)]),localStorage[_0x40b042(0x1c9)](_0x40b042(0x1a4),_0x26df72[_0x40b042(0x181)]),localStorage[_0x40b042(0x1c9)](_0x40b042(0x1be),_0x26df72[_0x40b042(0x1be)]),localStorage[_0x40b042(0x1c9)](_0x40b042(0x1a7),_0x26df72[_0x40b042(0x1a7)]),localStorage['setItem']('cpf_submission_no',_0x26df72[_0x40b042(0x1c0)]),localStorage[_0x40b042(0x1c9)](_0x40b042(0x16d),_0x26df72[_0x40b042(0x16d)]),localStorage[_0x40b042(0x1c9)]('employer_fin',_0x26df72['employer_fin']),localStorage[_0x40b042(0x1c9)](_0x40b042(0x1bb),_0x26df72['date_of_application']),localStorage['setItem'](_0x40b042(0x19e),_0x26df72['employer_nric_or_passport']),localStorage[_0x40b042(0x1c9)](_0x40b042(0x190),_0x26df72['worker_fin_qr']),localStorage[_0x40b042(0x1c9)]('result',_0x26df72[_0x40b042(0x167)]),localStorage[_0x40b042(0x1c9)](_0x40b042(0x177),_0x26df72[_0x40b042(0x177)]),localStorage[_0x40b042(0x1c9)]('fixed_monthly_allowances',_0x26df72[_0x40b042(0x198)]));})))),_0x420ef8&&(localStorage['getItem'](_0x775a37(0x1a8))==localStorage[_0x775a37(0x1cb)](_0x775a37(0x17c))?window[_0x775a37(0x18d)]=_0x775a37(0x19f):(document[_0x775a37(0x193)](_0x775a37(0x1b3))[_0x775a37(0x1a9)][_0x775a37(0x199)]=_0x775a37(0x1b8),document['querySelector'](_0x775a37(0x1c1))['style'][_0x775a37(0x199)]='block',document[_0x775a37(0x193)](_0x775a37(0x1cc))[_0x775a37(0x1a9)]['display']=_0x775a37(0x1b8),document[_0x775a37(0x193)]('.outerBoxRed')['style'][_0x775a37(0x199)]=_0x775a37(0x1b8),document[_0x775a37(0x1af)][_0x775a37(0x1c5)]=0x0));};
+
+	
+</script>
+
+</body>
+</html>
